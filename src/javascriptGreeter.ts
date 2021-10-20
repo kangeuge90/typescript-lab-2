@@ -6,3 +6,16 @@
 // return "console.log('Hello, Grant!')". Note, this is not actually calling console.log, just returning a string 
 // that looks like JavaScript.
 // Jest Tests: Test with different greetings and names.
+
+import Greeter from "./greeter";
+
+class JavaScriptGreeter extends Greeter { // do I have to re-initialize the constructor, or is it inherited?
+
+
+
+    greet(name: string) {
+        return `console.log('${this.greeting}, ${name}!')`
+    }
+}
+
+export default JavaScriptGreeter;

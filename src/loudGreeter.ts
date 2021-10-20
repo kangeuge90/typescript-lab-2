@@ -10,3 +10,19 @@
 // greet might return "Hello, Grant!!!". Note, the original greet method already has one exclamation point, 
 // so LoudGreeter starts with two exclamation points even before calling addVolume.
 // Jest Tests: Test with and without calling addVolume. Test calling addVolume different numbers of times.
+
+import Greeter from "./greeter";
+
+class LoudGreeter extends Greeter { // do I have to re-initialize the constructor, or is it inherited?
+    private extra: string = '!!';
+
+    addVolume() : void {
+        this.extra = `${this.extra}!`;
+    }
+
+    greet(name: string) {
+        return `${this.greeting}, ${name}!${this.extra}`
+    }
+}
+
+export default LoudGreeter;

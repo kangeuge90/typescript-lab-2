@@ -1,28 +1,19 @@
 import Greeter from "../src/greeter";
 
 describe("greeting method", () => {
-  test("middle mountain", () => {
-    const name = findNameOfTallestMountain([
-      { name: "Kilimanjaro", height: 19341 },
-      { name: "Everest", height: 29029 },
-      { name: "Denali", height: 20310 }
-    ]);
-    expect(name).toBe("Everest");
+  test("Greeting to Eugene", () => {
+    const testGreet = new Greeter('HellOOOOoo!')
+
+    const greetPerson = testGreet.greet('Eugene')
+
+    expect(greetPerson).toBe('HellOOOOoo!, Eugene!')
   });
-  test("first mountain", () => {
-    const name = findNameOfTallestMountain([
-      { name: "Everest", height: 29029 },
-      { name: "Kilimanjaro", height: 19341 },
-      { name: "Denali", height: 20310 }
-    ]);
-    expect(name).toBe("Everest");
+  test("Greeting to boy", () => {
+    const testGreet = new Greeter('Hi')
+
+    const greetPerson = testGreet.greet('boy')
+
+    expect(greetPerson).toBe('Hi, boy!')
   });
-  test("last mountain", () => {
-    const name = findNameOfTallestMountain([
-      { name: "Kilimanjaro", height: 19341 },
-      { name: "Denali", height: 20310 },
-      { name: "Everest", height: 29029 }
-    ]);
-    expect(name).toBe("Everest");
-  });
+
 });

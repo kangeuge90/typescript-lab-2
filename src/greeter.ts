@@ -14,8 +14,8 @@ class Greeter {
 
     }
 
-    greeting(name: string) {
-        return `${greeting}, ${name}!`
+    greet(name: string) {
+        return `${this.greeting}, ${name}!`
     }
 }
 
